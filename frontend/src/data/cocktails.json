@@ -1,0 +1,213 @@
+[
+  {
+    "category": "Vodka",
+    "cocktails": [
+      {
+        "name": "White Russian",
+        "description": "A Classic & Creamy Cocktail",
+        "thumbnailUrl": "/images/white-russian.jpg",
+        "heroUrl": "/images/white-russian.jpg",
+        "ingredients": [
+          "2 oz Vodka (60ml)",
+          "1 oz Kahlúa (30ml)",
+          "1 oz Heavy Cream (30ml)",
+          "Fresh Ice Cubes"
+        ],
+        "instructions": [
+          "Fill a rocks glass with large ice cubes.",
+          "Pour the vodka and Kahlúa directly over the ice.",
+          "Gently top with the heavy cream.",
+          "Stir gently before serving."
+        ],
+        "isUnderConstruction": false
+      },
+      {
+        "name": "Moscow Mule",
+        "description": "A Refreshing Vodka and Ginger Beer Classic",
+        "thumbnailUrl": "/images/moscow-mule.jpg",
+        "heroUrl": "/images/moscow-mule.jpg",
+        "ingredients": [],
+        "instructions": [],
+        "isUnderConstruction": true
+      },
+      {
+        "name": "Cosmopolitan",
+        "description": "A Bright and Citrusy Vodka Cocktail",
+        "thumbnailUrl": "/images/cosmopolitan.jpg",
+        "heroUrl": "/images/cosmopolitan.jpg",
+        "ingredients": [],
+        "instructions": [],
+        "isUnderConstruction": true
+      },
+      {
+        "name": "Bloody Mary",
+        "description": "A Savory Vodka Cocktail with Bold Flavor",
+        "thumbnailUrl": "/images/bloody-mary.jpg",
+        "heroUrl": "/images/bloody-mary.jpg",
+        "ingredients": [],
+        "instructions": [],
+        "isUnderConstruction": true
+      }
+    ]
+  },
+  {
+    "category": "Gin",
+    "cocktails": [
+      {
+        "name": "Negroni",
+        "description": "A Bold and Bittersweet Italian Classic",
+        "thumbnailUrl": "/images/negroni.jpg",
+        "heroUrl": "/images/negroni.jpg",
+        "ingredients": [],
+        "instructions": [],
+        "isUnderConstruction": true
+      },
+      {
+        "name": "Gin & Tonic",
+        "description": "A Crisp and Refreshing Gin Classic",
+        "thumbnailUrl": "/images/gin-tonic.jpg",
+        "heroUrl": "/images/gin-tonic.jpg",
+        "ingredients": [],
+        "instructions": [],
+        "isUnderConstruction": true
+      },
+      {
+        "name": "Tom Collins",
+        "description": "A Bright, Citrusy and Effervescent Gin Cocktail",
+        "thumbnailUrl": "/images/tom-collins.jpg",
+        "heroUrl": "/images/tom-collins.jpg",
+        "ingredients": [],
+        "instructions": [],
+        "isUnderConstruction": true
+      }
+    ]
+  },
+  {
+    "category": "Tequila & Mezcal",
+    "cocktails": [
+      {
+        "name": "Margarita",
+        "description": "A Bright and Citrusy Tequila Classic",
+        "thumbnailUrl": "/images/margarita.jpg",
+        "heroUrl": "/images/margarita.jpg",
+        "ingredients": [],
+        "instructions": [],
+        "isUnderConstruction": true
+      },
+      {
+        "name": "Paloma",
+        "description": "A Refreshing Tequila Cocktail with Grapefruit",
+        "thumbnailUrl": "/images/paloma.jpg",
+        "heroUrl": "/images/paloma.jpg",
+        "ingredients": [],
+        "instructions": [],
+        "isUnderConstruction": true
+      },
+      {
+        "name": "Mezcal Mule",
+        "description": "A Smoky and Refreshing Mezcal Cocktail",
+        "thumbnailUrl": "/images/mezcal-mule.jpg",
+        "heroUrl": "/images/mezcal-mule.jpg",
+        "ingredients": [],
+        "instructions": [],
+        "isUnderConstruction": true
+      }
+    ]
+  },
+  {
+    "category": "Rum",
+    "cocktails": [
+      {
+        "name": "Mojito",
+        "description": "A Fresh and Minty Cuban Classic",
+        "thumbnailUrl": "/images/mojito.jpg",
+        "heroUrl": "/images/mojito.jpg",
+        "ingredients": [],
+        "instructions": [],
+        "isUnderConstruction": true
+      },
+      {
+        "name": "Daiquiri",
+        "description": "A Simple and Balanced Rum Classic",
+        "thumbnailUrl": "/images/daiquiri.jpg",
+        "heroUrl": "/images/daiquiri.jpg",
+        "ingredients": [],
+        "instructions": [],
+        "isUnderConstruction": true
+      },
+      {
+        "name": "Piña Colada",
+        "description": "A Creamy Tropical Rum Cocktail",
+        "thumbnailUrl": "/images/pina-colada.jpg",
+        "heroUrl": "/images/pina-colada.jpg",
+        "ingredients": [],
+        "instructions": [],
+        "isUnderConstruction": true
+      }
+    ]
+  },
+  {
+    "category": "Whiskey",
+    "cocktails": [
+      {
+        "name": "Old Fashioned",
+        "description": "A Timeless and Spirit-Forward Whiskey Classic",
+        "thumbnailUrl": "/images/old-fashioned.jpg",
+        "heroUrl": "/images/old-fashioned.jpg",
+        "ingredients": [],
+        "instructions": [],
+        "isUnderConstruction": true
+      },
+      {
+        "name": "Whiskey Sour",
+        "description": "A Balanced Whiskey Cocktail with Citrus",
+        "thumbnailUrl": "/images/whiskey-sour.jpg",
+        "heroUrl": "/images/whiskey-sour.jpg",
+        "ingredients": [],
+        "instructions": [],
+        "isUnderConstruction": true
+      },
+      {
+        "name": "Manhattan",
+        "description": "A Refined and Spirit-Forward Whiskey Classic",
+        "thumbnailUrl": "/images/manhattan.jpg",
+        "heroUrl": "/images/manhattan.jpg",
+        "ingredients": [],
+        "instructions": [],
+        "isUnderConstruction": true
+      }
+    ]
+  },
+  {
+    "category": "Brandy & Cognac",
+    "cocktails": [
+      {
+        "name": "Sidecar",
+        "description": "A Classic Brandy Cocktail with Bright Citrus",
+        "thumbnailUrl": "/images/sidecar.jpg",
+        "heroUrl": "/images/sidecar.jpg",
+        "ingredients": [],
+        "instructions": [],
+        "isUnderConstruction": true
+      },
+      {
+        "name": "Brandy Alexander",
+        "description": "A Rich and Creamy Brandy Classic",
+        "thumbnailUrl": "/images/brandy-alexander.jpg",
+        "heroUrl": "/images/brandy-alexander.jpg",
+        "ingredients": [],
+        "instructions": [],
+        "isUnderConstruction": true
+      },
+      {
+        "name": "French 75",
+        "description": "A Sparkling Cocktail with Cognac and Citrus",
+        "thumbnailUrl": "/images/french-75.jpg",
+        "heroUrl": "/images/french-75.jpg",
+        "ingredients": [],
+        "instructions": [],
+        "isUnderConstruction": true
+      }
+    ]
+  }
+]

@@ -82,15 +82,13 @@ cock-tail/
     [x] **Step 1.1:** Initialize the Astro project with Tailwind CSS, set up the directory layout, and configure `astro.config.mjs` for GitHub Pages compatibility.
     [x] **Step 1.2:** Write the GitHub Actions `deploy.yml` workflow to automate static builds and deployments to the `gh-pages` branch.
     [x] **Step 1.3:** Configure the base layout template (`Layout.astro`) with global vibrant/minimalistic styling.
-    [/] **Step 1.4:** Create the JSON data structure for the base liquors and the sample White Russian cocktail.
+    [x] **Step 1.4:** Create the JSON data structure for the base liquors and the sample White Russian cocktail.
 
 ### Phase 2: UI/UX Component Development ###
 
-    [ ] Step 2.1: Build the base liquor category landing page layout.
-
-    [ ] Step 2.2: Build the interactive, expandable Cocktail Card component (handling the image click-to-enlarge and recipe reveal).
-
-    [ ] Step 2.3: Implement the "Under Construction" placeholder logic for non-hero cocktails.
+    [/] **Step 2.1:** Build the base liquor category landing page layout.
+    [ ] **Step 2.2:** Build the interactive, expandable Cocktail Card component (handling the image click-to-enlarge and recipe reveal).
+    [ ] **Step 2.3:** Implement the "Under Construction" placeholder logic for non-hero cocktails.
 
 ### Phase 3: Future Expansion Scaffolding ###
 
@@ -100,10 +98,10 @@ cock-tail/
 
 ## 5. Current Active Execution Unit
 
-* **Current Step ID:** Step 1.4
+* **Current Step ID:** Step 2.1
 * **Status:** `[/] In Progress`
-* **Target Files:** `frontend/src/data/cocktails.json` (or equivalent data structure)
-* **Objective:** Create the structured JSON data file containing base liquor categories, metadata, and the prominent White Russian example complete with recipe and ingredient data.
+* **Target Files:** `frontend/src/pages/index.astro`
+* **Objective:** Build the primary landing page displaying the base liquor categories, mapping out the cocktails from `cocktails.json`.
 
 ---
 
@@ -113,3 +111,4 @@ cock-tail/
 * **2026-08-08:** Step 1.1 completed: Astro/Tailwind frontend initialized and verified with successful production build.
 * **2026-08-08:** Step 1.2 completed: GitHub Actions workflow created for automated GitHub Pages deployment.
 * **2026-08-09:** Step 1.3 completed: Base layout template (`Layout.astro`) created with vibrant, modern Tailwind styling.
+* **2026-08-09:** Step 1.4 completed: Structured `cocktails.json` dataset created containing base liquor categories and cocktail details.
