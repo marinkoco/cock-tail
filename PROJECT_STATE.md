@@ -88,20 +88,20 @@ cock-tail/
 
     [x] **Step 2.1:** Build the base liquor category landing page layout.
     [x] **Step 2.2:** Build the interactive, expandable Cocktail Card component (handling the image click-to-enlarge and recipe reveal).
-    [/] **Step 2.3:** Implement the "Under Construction" placeholder logic for non-hero cocktails.
+    [x] **Step 2.3:** Implement the "Under Construction" placeholder logic for non-hero cocktails.
 
 ### Phase 3: Future Expansion Scaffolding ###
 
-    [ ] Step 3.1: Scaffold initial FastAPI backend directory structure for future migration off GitHub Pages.
+    [/] Step 3.1: Scaffold initial FastAPI backend directory structure for future migration off GitHub Pages.
 
 ---
 
 ## 5. Current Active Execution Unit
 
-* **Current Step ID:** Step 2.3
+* **Current Step ID:** Step 3.1
 * **Status:** `[/] In Progress`
-* **Target Files:** `frontend/src/components/CocktailCard.astro`, `frontend/src/pages/index.astro`
-* **Objective:** Enhance the component logic to detect `isUnderConstruction` status from the JSON and render a subtle "Coming Soon" or locked overlay/style for those items instead of the full recipe view.
+* **Target Files:** `public/images/`
+* **Objective:** Source and add the actual image files referenced in `cocktails.json` (like the White Russian thumbnail and hero image) so they render correctly on the frontend.
 
 ---
 
@@ -114,3 +114,4 @@ cock-tail/
 * **2026-08-09:** Step 1.4 completed: Structured `cocktails.json` dataset created containing base liquor categories and cocktail details.
 * **2026-08-09:** Step 2.1 completed: Primary landing page layout built with base liquor category grids.
 * **2026-08-09:** Step 2.2 completed: Interactive, responsive CocktailCard component implemented using native HTML `<dialog>`.
+* **2026-08-09:** Step 2.3 completed: "Under Construction" conditional rendering and visual overlays added to non-active cocktail cards.
