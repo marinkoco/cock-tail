@@ -1,0 +1,201 @@
+---
+interface Cocktail {
+  name: string;
+  description: string;
+  thumbnailUrl?: string;
+  heroUrl?: string;
+  ingredients: string[];
+  instructions: string[];
+  isUnderConstruction: boolean;
+}
+
+interface Props {
+  cocktail: Cocktail;
+}
+
+const { cocktail } = Astro.props;
+---
+
+<article class="group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+  <button
+    type="button"
+    class="block w-full text-left focus:outline-none focus-visible:ring-4 focus-visible:ring-vibrant-300"
+    data-cocktail-trigger
+    aria-label={`View ${cocktail.name} recipe`}
+  >
+    <div class="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-vibrant-100 via-orange-50 to-electric-100">
+      {
+        cocktail.thumbnailUrl ? (
+          <img
+            src={cocktail.thumbnailUrl}
+            alt={cocktail.name}
+            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            loading="lazy"
+          />
+        ) : (
+          <div class="flex h-full w-full items-center justify-center">
+            <span class="text-sm font-semibold text-vibrant-600">
+              Cocktail
+            </span>
+          </div>
+        )
+      }
+
+      {
+        cocktail.isUnderConstruction && (
+          <div class="absolute right-3 top-3 rounded-full bg-slate-900/80 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
+            Coming soon
+          </div>
+        )
+      }
+    </div>
+
+    <div class="p-5">
+      <h3 class="text-lg font-bold text-slate-900 transition-colors group-hover:text-vibrant-600">
+        {cocktail.name}
+      </h3>
+
+      <p class="mt-2 line-clamp-2 text-sm leading-6 text-slate-600">
+        {cocktail.description}
+      </p>
+
+      <div class="mt-4 text-sm font-semibold text-electric-600">
+        View recipe →
+      </div>
+    </div>
+  </button>
+
+  <dialog
+    class="fixed inset-0 m-auto w-[calc(100%-2rem)] max-w-5xl overflow-hidden rounded-2xl border-0 bg-white p-0 shadow-2xl backdrop:bg-slate-950/70 backdrop:backdrop-blur-sm"
+    data-cocktail-dialog
+  >
+    <div class="max-h-[90vh] overflow-y-auto">
+      <div class="grid md:grid-cols-2">
+        <div class="relative min-h-64 bg-gradient-to-br from-vibrant-100 via-orange-50 to-electric-100 md:min-h-full">
+          {
+            cocktail.heroUrl ? (
+              <img
+                src={cocktail.heroUrl}
+                alt={cocktail.name}
+                class="h-full max-h-[420px] w-full object-cover md:sticky md:top-0 md:h-full md:max-h-none"
+              />
+            ) : (
+              <div class="flex min-h-64 items-center justify-center">
+                <span class="text-lg font-semibold text-vibrant-600">
+                  Cocktail
+                </span>
+              </div>
+            )
+          }
+        </div>
+
+        <div class="relative p-6 sm:p-8">
+          <button
+            type="button"
+            data-cocktail-close
+            class="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-xl font-semibold text-slate-600 transition hover:bg-vibrant-100 hover:text-vibrant-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-vibrant-300"
+            aria-label={`Close ${cocktail.name} recipe`}
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+          <div class="pr-12">
+            <p class="text-sm font-semibold uppercase tracking-wider text-electric-600">
+              Cocktail Recipe
+            </p>
+
+            <h2 class="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              {cocktail.name}
+            </h2>
+
+            <p class="mt-3 text-base leading-7 text-slate-600">
+              {cocktail.description}
+            </p>
+          </div>
+
+          {
+            cocktail.isUnderConstruction ? (
+              <div class="mt-8 rounded-xl border border-vibrant-200 bg-vibrant-50 p-5">
+                <h3 class="font-bold text-vibrant-800">Recipe coming soon</h3>
+                <p class="mt-2 text-sm leading-6 text-vibrant-700">
+                  This cocktail is currently under construction. Check back
+                  soon for the complete recipe.
+                </p>
+              </div>
+            ) : (
+              <div class="mt-8 space-y-8">
+                <section>
+                  <h3 class="text-xl font-bold text-slate-900">
+                    Ingredients
+                  </h3>
+
+                  <ul class="mt-4 space-y-3">
+                    {
+                      cocktail.ingredients.map((ingredient) => (
+                        <li class="flex gap-3 text-sm leading-6 text-slate-700">
+                          <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-vibrant-500" />
+                          <span>{ingredient}</span>
+                        </li>
+                      ))
+                    }
+                  </ul>
+                </section>
+
+                <section>
+                  <h3 class="text-xl font-bold text-slate-900">
+                    Instructions
+                  </h3>
+
+                  <ol class="mt-4 space-y-4">
+                    {
+                      cocktail.instructions.map((instruction, index) => (
+                        <li class="flex gap-4 text-sm leading-6 text-slate-700">
+                          <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-electric-100 text-xs font-bold text-electric-700">
+                            {index + 1}
+                          </span>
+                          <span class="pt-0.5">{instruction}</span>
+                        </li>
+                      ))
+                    }
+                  </ol>
+                </section>
+              </div>
+            )
+          }
+        </div>
+      </div>
+    </div>
+  </dialog>
+</article>
+
+<script>
+  const cards = document.querySelectorAll<HTMLElement>('[data-cocktail-trigger]');
+
+  cards.forEach((trigger) => {
+    const card = trigger.closest('article');
+    const dialog = card?.querySelector<HTMLDialogElement>('[data-cocktail-dialog]');
+    const closeButton = dialog?.querySelector<HTMLButtonElement>('[data-cocktail-close]');
+
+    if (!dialog || !closeButton) {
+      return;
+    }
+
+    trigger.addEventListener('click', () => {
+      dialog.showModal();
+    });
+
+    closeButton.addEventListener('click', () => {
+      dialog.close();
+    });
+
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) {
+        dialog.close();
+      }
+    });
+
+    dialog.addEventListener('close', () => {
+      trigger.focus();
+    });
+  });
+</script>

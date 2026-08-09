@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import CocktailCard from '../components/CocktailCard.astro';
 import cocktailCategories from '../data/cocktails.json';
 ---
 
@@ -23,12 +24,15 @@ import cocktailCategories from '../data/cocktails.json';
   <div class="space-y-16 pb-12 sm:space-y-20">
     {
       cocktailCategories.map((category) => (
-        <section aria-labelledby={`${category.category.toLowerCase().replaceAll(' ', '-')}-heading`}>
+        <section
+          aria-labelledby={`${category.category.toLowerCase().replaceAll(' ', '-')}-heading`}
+        >
           <div class="mb-6 flex items-end justify-between gap-4">
             <div>
               <p class="mb-1 text-sm font-semibold uppercase tracking-wider text-electric-600">
                 Base Liquor
               </p>
+
               <h2
                 id={`${category.category.toLowerCase().replaceAll(' ', '-')}-heading`}
                 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
@@ -45,56 +49,7 @@ import cocktailCategories from '../data/cocktails.json';
           <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {
               category.cocktails.map((cocktail) => (
-                <article class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
-                  <div class="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-vibrant-100 via-orange-50 to-electric-100">
-                    {cocktail.thumbnailUrl ? (
-                      <img
-                        src={cocktail.thumbnailUrl}
-                        alt={cocktail.name}
-                        class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                        loading="lazy"
-                      />
-                    ) : (
-                      <div class="flex h-full w-full items-center justify-center">
-                        <span class="text-sm font-semibold text-vibrant-600">
-                          Cocktail
-                        </span>
-                      </div>
-                    )}
-
-                    {cocktail.isUnderConstruction && (
-                      <div class="absolute right-3 top-3 rounded-full bg-slate-900/80 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
-                        Coming soon
-                      </div>
-                    )}
-                  </div>
-
-                  <div class="p-5">
-                    <h3 class="text-lg font-bold text-slate-900 transition-colors group-hover:text-vibrant-600">
-                      {cocktail.name}
-                    </h3>
-
-                    <p class="mt-2 line-clamp-2 text-sm leading-6 text-slate-600">
-                      {cocktail.description}
-                    </p>
-
-                    <div class="mt-4 flex items-center justify-between">
-                      <span class="text-xs font-semibold uppercase tracking-wider text-electric-600">
-                        {category.category}
-                      </span>
-
-                      {cocktail.isUnderConstruction ? (
-                        <span class="text-xs font-medium text-slate-400">
-                          Recipe in progress
-                        </span>
-                      ) : (
-                        <span class="text-xs font-semibold text-vibrant-600">
-                          Classic
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                </article>
+                <CocktailCard cocktail={cocktail} />
               ))
             }
           </div>
