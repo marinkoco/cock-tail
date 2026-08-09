@@ -32,16 +32,20 @@ cock-tail/
 │   └── PROJECT_STATE.md
 ├── frontend/
 │   ├── public/
-│   │   └── images/
 │   ├── src/
-│   │   ├── components/
-│   │   ├── layouts/
-│   │   ├── pages/
-│   │   └── styles/
 │   ├── astro.config.mjs
 │   ├── tailwind.config.cjs
 │   └── package.json
-├── backend/ (Reserved for future FastAPI integration)
+├── backend/ 
+│   ├── alembic/
+│   ├── api/
+│   ├── core/
+│   │   └── database.py
+│   ├── models/
+│   ├── schemas/
+│   ├── alembic.ini
+│   ├── main.py
+│   └── requirements.txt
 ├── .env.example
 ├── .gitignore
 └── README.md
@@ -93,16 +97,17 @@ cock-tail/
 ### Phase 3: Future Expansion Scaffolding ###
 
     [x] **Step 3.1:** Scaffold initial FastAPI backend directory structure for future migration off GitHub Pages.
-    [/] **Step 3.2:** Configure PostgreSQL database connection pool and initialize Alembic for schema migrations.
+    [x] **Step 3.2:** Configure PostgreSQL database connection pool and initialize Alembic for schema migrations.
+    [/] **Step 3.3:** Create a `docker-compose.yml` file to provision a dedicated PostgreSQL database container for the `cock-tail` project and define the initial SQLAlchemy database models.
 
 ---
 
 ## 5. Current Active Execution Unit
 
-* **Current Step ID:** Step 3.2
+* **Current Step ID:** Step 3.3
 * **Status:** `[/] In Progress`
-* **Target Files:** backend/alembic.ini, backend/core/database.py, backend/requirements.txt
-* **Objective:** Establish the PostgreSQL database connection logic and set up the Alembic migration environment to manage future database models and schema changes.
+* **Target Files:** docker-compose.yml, backend/models/base.py, backend/models/cocktail.py
+* **Objective:** Provision a dedicated local PostgreSQL database using Docker Compose and establish the initial SQLAlchemy models to mirror the existing cocktails.json data structure.
 
 ---
 
@@ -117,3 +122,4 @@ cock-tail/
 * **2026-08-09:** Step 2.2 completed: Interactive, responsive CocktailCard component implemented using native HTML `<dialog>`.
 * **2026-08-09:** Step 2.3 completed: "Under Construction" conditional rendering and visual overlays added to non-active cocktail cards.
 * **2026-08-09:** Step 3.1 completed: Scaffolded the FastAPI backend directory structure and initialized the core application entry point.
+* **2026-08-09:** Step 3.2 completed: PostgreSQL connection logic (SQLAlchemy) and Alembic migration environment configured. Intentionally left without an active database to maintain strict project isolation.

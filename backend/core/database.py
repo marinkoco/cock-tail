@@ -1,0 +1,42 @@
+from collections.abc import AsyncGenerator
+
+from pydantic_settings import BaseSettings, SettingsConfigDict
+from sqlalchemy.ext.asyncio import (
+    AsyncSession,
+    async_sessionmaker,
+    create_async_engine,
+)
+from sqlalchemy.orm import DeclarativeBase
+
+
+class Settings(BaseSettings):
+    database_url: str
+
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore",
+    )
+
+
+settings = Settings()
+
+engine = create_async_engine(
+    settings.database_url,
+    pool_pre_ping=True,
+)
+
+async_session_maker = async_sessionmaker(
+    engine,
+    class_=AsyncSession,
+    expire_on_commit=False,
+)
+
+
+class Base(DeclarativeBase):
+    pass
+
+
+async def get_db() -> AsyncGenerator[AsyncSession, None]:
+    async with async_session_maker() as session:
+        yield session
