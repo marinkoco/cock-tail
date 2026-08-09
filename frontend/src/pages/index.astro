@@ -2,27 +2,6 @@
 import Layout from '../layouts/Layout.astro';
 import CocktailCard from '../components/CocktailCard.astro';
 import cocktailCategories from '../data/cocktails.json';
-
-// Normalize BASE_URL so it doesn't end with a trailing slash
-const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
-
-// Process image URLs to prepend the correct base path for GitHub Pages
-const formattedCategories = cocktailCategories.map((category) => ({
-  ...category,
-  cocktails: category.cocktails.map((cocktail) => ({
-    ...cocktail,
-    thumbnailUrl: cocktail.thumbnailUrl
-      ? cocktail.thumbnailUrl.startsWith('http')
-        ? cocktail.thumbnailUrl
-        : `${baseUrl}${cocktail.thumbnailUrl.startsWith('/') ? '' : '/'}${cocktail.thumbnailUrl}`
-      : undefined,
-    heroUrl: cocktail.heroUrl
-      ? cocktail.heroUrl.startsWith('http')
-        ? cocktail.heroUrl
-        : `${baseUrl}${cocktail.heroUrl.startsWith('/') ? '' : '/'}${cocktail.heroUrl}`
-      : undefined,
-  })),
-}));
 ---
 
 <Layout title="Vibrant Cocktails - Home">
@@ -44,7 +23,7 @@ const formattedCategories = cocktailCategories.map((category) => ({
 
   <div class="space-y-16 pb-12 sm:space-y-20">
     {
-      formattedCategories.map((category) => (
+      cocktailCategories.map((category) => (
         <section
           aria-labelledby={`${category.category.toLowerCase().replaceAll(' ', '-')}-heading`}
         >

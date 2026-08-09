@@ -5,8 +5,8 @@
       {
         "name": "White Russian",
         "description": "A Classic & Creamy Cocktail",
-        "thumbnailUrl": "/images/white-russian.png",
-        "heroUrl": "/images/white-russian.png",
+        "thumbnailUrl": "/images/cocktails/white-russian.png",
+        "heroUrl": "/images/cocktails/white-russian.png",
         "ingredients": [
           "2 oz Vodka (60ml)",
           "1 oz Kahlúa (30ml)",

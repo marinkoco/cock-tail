@@ -14,6 +14,20 @@ interface Props {
 }
 
 const { cocktail } = Astro.props;
+
+// Get base URL (e.g. '/cock-tail/') and normalize trailing/leading slashes
+const rawBase = import.meta.env.BASE_URL || '/';
+const baseUrl = rawBase.endsWith('/') ? rawBase.slice(0, -1) : rawBase;
+
+const resolveImageUrl = (url?: string) => {
+  if (!url) return undefined;
+  if (url.startsWith('http://') || url.startsWith('https://')) return url;
+  const cleanPath = url.startsWith('/') ? url : `/${url}`;
+  return `${baseUrl}${cleanPath}`;
+};
+
+const thumbnailUrl = resolveImageUrl(cocktail.thumbnailUrl);
+const heroUrl = resolveImageUrl(cocktail.heroUrl);
 ---
 
 <article
@@ -30,9 +44,9 @@ const { cocktail } = Astro.props;
         aria-disabled="true"
       >
         <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
-          {cocktail.thumbnailUrl ? (
+          {thumbnailUrl ? (
             <img
-              src={cocktail.thumbnailUrl}
+              src={thumbnailUrl}
               alt={cocktail.name}
               class="h-full w-full object-cover grayscale opacity-60"
               loading="lazy"
@@ -81,9 +95,9 @@ const { cocktail } = Astro.props;
           aria-label={`View ${cocktail.name} recipe`}
         >
           <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
-            {cocktail.thumbnailUrl ? (
+            {thumbnailUrl ? (
               <img
-                src={cocktail.thumbnailUrl}
+                src={thumbnailUrl}
                 alt={cocktail.name}
                 class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 loading="lazy"
@@ -117,14 +131,14 @@ const { cocktail } = Astro.props;
           data-cocktail-dialog
         >
           <div class="max-h-[85vh] overflow-y-auto">
-            {/* Mobile: Flex column (Image top, details bottom) | Desktop: Grid 2 cols (Image left, details right) */}
+            {/* Mobile: Flex Column (Image top, recipe bottom) | Desktop: Grid 2 Columns */}
             <div class="flex flex-col md:grid md:grid-cols-2">
               
-              {/* Image Section */}
+              {/* Image Container */}
               <div class="relative h-64 w-full bg-slate-100 md:h-full md:min-h-[450px]">
-                {cocktail.heroUrl ? (
+                {heroUrl ? (
                   <img
-                    src={cocktail.heroUrl}
+                    src={heroUrl}
                     alt={cocktail.name}
                     class="h-full w-full object-cover"
                   />
@@ -137,7 +151,7 @@ const { cocktail } = Astro.props;
                 )}
               </div>
 
-              {/* Recipe Content Section */}
+              {/* Recipe Info Container */}
               <div class="relative p-6 sm:p-8">
                 <button
                   type="button"
