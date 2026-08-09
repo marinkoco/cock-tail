@@ -92,16 +92,17 @@ cock-tail/
 
 ### Phase 3: Future Expansion Scaffolding ###
 
-    [/] Step 3.1: Scaffold initial FastAPI backend directory structure for future migration off GitHub Pages.
+    [x] **Step 3.1:** Scaffold initial FastAPI backend directory structure for future migration off GitHub Pages.
+    [/] **Step 3.2:** Configure PostgreSQL database connection pool and initialize Alembic for schema migrations.
 
 ---
 
 ## 5. Current Active Execution Unit
 
-* **Current Step ID:** Step 3.1
+* **Current Step ID:** Step 3.2
 * **Status:** `[/] In Progress`
-* **Target Files:** `public/images/`
-* **Objective:** Source and add the actual image files referenced in `cocktails.json` (like the White Russian thumbnail and hero image) so they render correctly on the frontend.
+* **Target Files:** backend/alembic.ini, backend/core/database.py, backend/requirements.txt
+* **Objective:** Establish the PostgreSQL database connection logic and set up the Alembic migration environment to manage future database models and schema changes.
 
 ---
 
@@ -115,3 +116,4 @@ cock-tail/
 * **2026-08-09:** Step 2.1 completed: Primary landing page layout built with base liquor category grids.
 * **2026-08-09:** Step 2.2 completed: Interactive, responsive CocktailCard component implemented using native HTML `<dialog>`.
 * **2026-08-09:** Step 2.3 completed: "Under Construction" conditional rendering and visual overlays added to non-active cocktail cards.
+* **2026-08-09:** Step 3.1 completed: Scaffolded the FastAPI backend directory structure and initialized the core application entry point.

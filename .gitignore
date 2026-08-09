@@ -21,3 +21,10 @@ Thumbs.db
 
 # Project personal notes & prompts
 *.nfo
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
