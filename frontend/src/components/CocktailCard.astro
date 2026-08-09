@@ -29,23 +29,23 @@ const { cocktail } = Astro.props;
         aria-label={`${cocktail.name} is coming soon`}
         aria-disabled="true"
       >
-        <div class="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-amber-100 via-orange-50 to-amber-200">
+        <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
           {cocktail.thumbnailUrl ? (
             <img
               src={cocktail.thumbnailUrl}
               alt={cocktail.name}
-              class="h-full w-full object-cover grayscale opacity-75"
+              class="h-full w-full object-cover grayscale opacity-60"
               loading="lazy"
             />
           ) : (
-            <div class="flex h-full w-full items-center justify-center">
-              <span class="text-sm font-semibold text-amber-600">
-                Cocktail
+            <div class="flex h-full w-full items-center justify-center bg-gradient-to-br from-amber-100 via-orange-50 to-amber-200">
+              <span class="text-sm font-semibold text-amber-700">
+                {cocktail.name}
               </span>
             </div>
           )}
 
-          <div class="absolute inset-0 flex items-center justify-center bg-slate-950/10">
+          <div class="absolute inset-0 flex items-center justify-center bg-slate-950/20">
             <span class="rounded-full bg-slate-900/85 px-4 py-2 text-sm font-bold text-white shadow-lg backdrop-blur-sm">
               Coming Soon
             </span>
@@ -80,7 +80,7 @@ const { cocktail } = Astro.props;
           data-cocktail-trigger
           aria-label={`View ${cocktail.name} recipe`}
         >
-          <div class="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-amber-100 via-orange-50 to-amber-200">
+          <div class="relative aspect-[4/3] overflow-hidden bg-slate-100">
             {cocktail.thumbnailUrl ? (
               <img
                 src={cocktail.thumbnailUrl}
@@ -89,9 +89,9 @@ const { cocktail } = Astro.props;
                 loading="lazy"
               />
             ) : (
-              <div class="flex h-full w-full items-center justify-center">
-                <span class="text-sm font-semibold text-amber-600">
-                  Cocktail
+              <div class="flex h-full w-full items-center justify-center bg-gradient-to-br from-amber-100 via-orange-50 to-amber-200">
+                <span class="text-sm font-semibold text-amber-700">
+                  {cocktail.name}
                 </span>
               </div>
             )}
@@ -113,61 +113,65 @@ const { cocktail } = Astro.props;
         </button>
 
         <dialog
-          class="fixed inset-0 m-auto w-[calc(100%-2rem)] max-w-5xl overflow-hidden rounded-2xl border-0 bg-white p-0 shadow-2xl backdrop:bg-slate-950/70 backdrop:backdrop-blur-sm"
+          class="fixed inset-0 m-auto w-[calc(100%-2rem)] max-w-4xl overflow-hidden rounded-2xl border-0 bg-white p-0 shadow-2xl backdrop:bg-slate-950/70 backdrop:backdrop-blur-sm"
           data-cocktail-dialog
         >
-          <div class="max-h-[90vh] overflow-y-auto">
-            <div class="grid md:grid-cols-2">
-              <div class="relative min-h-64 bg-gradient-to-br from-amber-100 via-orange-50 to-amber-200 md:min-h-full">
+          <div class="max-h-[85vh] overflow-y-auto">
+            {/* Mobile: Flex column (Image top, details bottom) | Desktop: Grid 2 cols (Image left, details right) */}
+            <div class="flex flex-col md:grid md:grid-cols-2">
+              
+              {/* Image Section */}
+              <div class="relative h-64 w-full bg-slate-100 md:h-full md:min-h-[450px]">
                 {cocktail.heroUrl ? (
                   <img
                     src={cocktail.heroUrl}
                     alt={cocktail.name}
-                    class="h-full max-h-[420px] w-full object-cover md:sticky md:top-0 md:h-full md:max-h-none"
+                    class="h-full w-full object-cover"
                   />
                 ) : (
-                  <div class="flex min-h-64 items-center justify-center">
-                    <span class="text-lg font-semibold text-amber-600">
-                      Cocktail
+                  <div class="flex h-full w-full items-center justify-center bg-gradient-to-br from-amber-100 via-orange-50 to-amber-200 p-6 text-center">
+                    <span class="text-xl font-bold text-amber-800">
+                      {cocktail.name}
                     </span>
                   </div>
                 )}
               </div>
 
+              {/* Recipe Content Section */}
               <div class="relative p-6 sm:p-8">
                 <button
                   type="button"
                   data-cocktail-close
-                  class="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-xl font-semibold text-slate-600 transition hover:bg-amber-100 hover:text-amber-700 focus:outline-none focus-visible:ring-4 focus-visible:ring-amber-300"
+                  class="absolute right-4 top-4 z-10 inline-flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 text-slate-600 transition hover:bg-amber-100 hover:text-amber-700 focus:outline-none"
                   aria-label={`Close ${cocktail.name} recipe`}
                 >
-                  <span aria-hidden="true">&times;</span>
+                  <span class="text-xl font-bold">&times;</span>
                 </button>
 
-                <div class="pr-12">
-                  <p class="text-sm font-semibold uppercase tracking-wider text-amber-600">
+                <div class="pr-8">
+                  <p class="text-xs font-semibold uppercase tracking-wider text-amber-600">
                     Cocktail Recipe
                   </p>
 
-                  <h2 class="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+                  <h2 class="mt-1 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
                     {cocktail.name}
                   </h2>
 
-                  <p class="mt-3 text-base leading-7 text-slate-600">
+                  <p class="mt-2 text-sm leading-6 text-slate-600">
                     {cocktail.description}
                   </p>
                 </div>
 
-                <div class="mt-8 space-y-8">
+                <div class="mt-6 space-y-6">
                   <section>
-                    <h3 class="text-xl font-bold text-slate-900">
+                    <h3 class="text-base font-bold text-slate-900">
                       Ingredients
                     </h3>
 
-                    <ul class="mt-4 space-y-3">
+                    <ul class="mt-3 space-y-2">
                       {cocktail.ingredients.map((ingredient) => (
-                        <li class="flex gap-3 text-sm leading-6 text-slate-700">
-                          <span class="mt-2 h-2 w-2 shrink-0 rounded-full bg-amber-500" />
+                        <li class="flex items-center gap-2.5 text-sm text-slate-700">
+                          <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
                           <span>{ingredient}</span>
                         </li>
                       ))}
@@ -175,14 +179,14 @@ const { cocktail } = Astro.props;
                   </section>
 
                   <section>
-                    <h3 class="text-xl font-bold text-slate-900">
+                    <h3 class="text-base font-bold text-slate-900">
                       Instructions
                     </h3>
 
-                    <ol class="mt-4 space-y-4">
+                    <ol class="mt-3 space-y-3">
                       {cocktail.instructions.map((instruction, index) => (
-                        <li class="flex gap-4 text-sm leading-6 text-slate-700">
-                          <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-amber-100 text-xs font-bold text-amber-700">
+                        <li class="flex gap-3 text-sm text-slate-700">
+                          <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-amber-100 text-xs font-bold text-amber-800">
                             {index + 1}
                           </span>
                           <span class="pt-0.5">{instruction}</span>
@@ -192,6 +196,7 @@ const { cocktail } = Astro.props;
                   </section>
                 </div>
               </div>
+
             </div>
           </div>
         </dialog>
