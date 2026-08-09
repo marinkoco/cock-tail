@@ -86,8 +86,8 @@ cock-tail/
 
 ### Phase 2: UI/UX Component Development ###
 
-    [/] **Step 2.1:** Build the base liquor category landing page layout.
-    [ ] **Step 2.2:** Build the interactive, expandable Cocktail Card component (handling the image click-to-enlarge and recipe reveal).
+    [x] **Step 2.1:** Build the base liquor category landing page layout.
+    [/] **Step 2.2:** Build the interactive, expandable Cocktail Card component (handling the image click-to-enlarge and recipe reveal).
     [ ] **Step 2.3:** Implement the "Under Construction" placeholder logic for non-hero cocktails.
 
 ### Phase 3: Future Expansion Scaffolding ###
@@ -98,10 +98,10 @@ cock-tail/
 
 ## 5. Current Active Execution Unit
 
-* **Current Step ID:** Step 2.1
+* **Current Step ID:** Step 2.2
 * **Status:** `[/] In Progress`
-* **Target Files:** `frontend/src/pages/index.astro`
-* **Objective:** Build the primary landing page displaying the base liquor categories, mapping out the cocktails from `cocktails.json`.
+* **Target Files:** `frontend/src/components/CocktailCard.astro` (or equivalent component)
+* **Objective:** Build the interactive cocktail card component that handles the click/tap interaction to enlarge the image and display the side-by-side recipe as discussed.
 
 ---
 
@@ -112,3 +112,4 @@ cock-tail/
 * **2026-08-08:** Step 1.2 completed: GitHub Actions workflow created for automated GitHub Pages deployment.
 * **2026-08-09:** Step 1.3 completed: Base layout template (`Layout.astro`) created with vibrant, modern Tailwind styling.
 * **2026-08-09:** Step 1.4 completed: Structured `cocktails.json` dataset created containing base liquor categories and cocktail details.
+* **2026-08-09:** Step 2.1 completed: Primary landing page layout built with base liquor category grids.
