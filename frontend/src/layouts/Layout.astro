@@ -1,0 +1,37 @@
+---
+interface Props {
+  title?: string;
+}
+
+const { title = 'Cock-Tail' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f97316" />
+    <meta
+      name="description"
+      content="Cock-Tail — a vibrant, modern cocktail experience."
+    />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="min-h-screen bg-gradient-to-br from-orange-50 via-white to-cyan-50 font-sans text-slate-900 antialiased">
+    <div class="min-h-screen">
+      <div class="mx-auto flex min-h-screen w-full max-w-7xl flex-col px-4 py-6 sm:px-6 lg:px-8">
+        <main class="flex flex-1 flex-col">
+          <slot />
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

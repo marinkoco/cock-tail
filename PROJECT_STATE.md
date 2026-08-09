@@ -79,13 +79,10 @@ cock-tail/
 
 ### Phase 1: Environment Setup & CI/CD Pipeline ###
 
-    [ ] Step 1.1: Initialize the Astro project with Tailwind CSS, set up the directory layout, and configure astro.config.mjs for GitHub Pages compatibility.
-
-    [ ] Step 1.2: Write the GitHub Actions deploy.yml workflow to automate static builds and deployments to the gh-pages branch.
-
-    [ ] Step 1.3: Configure the base layout template (Layout.astro) with global vibrant/minimalistic styling.
-
-    [ ] Step 1.4: Create the JSON data structure for the base liquors and the sample White Russian cocktail.
+    [x] **Step 1.1:** Initialize the Astro project with Tailwind CSS, set up the directory layout, and configure `astro.config.mjs` for GitHub Pages compatibility.
+    [x] **Step 1.2:** Write the GitHub Actions `deploy.yml` workflow to automate static builds and deployments to the `gh-pages` branch.
+    [x] **Step 1.3:** Configure the base layout template (`Layout.astro`) with global vibrant/minimalistic styling.
+    [/] **Step 1.4:** Create the JSON data structure for the base liquors and the sample White Russian cocktail.
 
 ### Phase 2: UI/UX Component Development ###
 
@@ -99,16 +96,20 @@ cock-tail/
 
     [ ] Step 3.1: Scaffold initial FastAPI backend directory structure for future migration off GitHub Pages.
 
+---
+
 ## 5. Current Active Execution Unit
 
-* Current Step ID: Step 1.1
+* **Current Step ID:** Step 1.4
+* **Status:** `[/] In Progress`
+* **Target Files:** `frontend/src/data/cocktails.json` (or equivalent data structure)
+* **Objective:** Create the structured JSON data file containing base liquor categories, metadata, and the prominent White Russian example complete with recipe and ingredient data.
 
-* Status: [/] In Progress
-
-* Target Files: package.json, astro.config.mjs, tailwind.config.cjs, .gitignore
-
-* Objective: Initialize the Astro project skeleton, inject Tailwind CSS configuration, and establish the base project directories with GitHub Pages routing in mind.
+---
 
 ## 6. Audit Trail & Progress Log
 
-    2026-08-08: Project blueprint updated to reflect cock-tail repository name, GitHub Actions CI/CD, and removal of initial Docker overhead.
+* **2026-08-08:** Project blueprint updated to reflect `cock-tail` repository name.
+* **2026-08-08:** Step 1.1 completed: Astro/Tailwind frontend initialized and verified with successful production build.
+* **2026-08-08:** Step 1.2 completed: GitHub Actions workflow created for automated GitHub Pages deployment.
+* **2026-08-09:** Step 1.3 completed: Base layout template (`Layout.astro`) created with vibrant, modern Tailwind styling.
