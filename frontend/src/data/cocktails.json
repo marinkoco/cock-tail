@@ -24,29 +24,63 @@
       {
         "name": "Moscow Mule",
         "description": "A Refreshing Vodka and Ginger Beer Classic",
-        "thumbnailUrl": "/images/moscow-mule.jpg",
-        "heroUrl": "/images/moscow-mule.jpg",
-        "ingredients": [],
-        "instructions": [],
-        "isUnderConstruction": true
+        "thumbnailUrl": "/images/cocktails/moscow-mule.jpg",
+        "heroUrl": "/images/cocktails/moscow-mule.jpg",
+        "ingredients": [
+          "2 oz Vodka (60ml)",
+          "4 oz Ginger Beer (120ml)",
+          "0.5 oz Fresh Lime Juice (15ml)",
+          "Fresh Ice Cubes",
+          "Lime Wedge for Garnish"
+        ],
+        "instructions": [
+          "Fill a copper mug or highball glass with fresh ice cubes.",
+          "Pour the vodka and lime juice over the ice.",
+          "Top off with ginger beer.",
+          "Stir gently to combine and garnish with a lime wedge."
+        ],
+        "isUnderConstruction": false
       },
       {
         "name": "Cosmopolitan",
         "description": "A Bright and Citrusy Vodka Cocktail",
-        "thumbnailUrl": "/images/cosmopolitan.jpg",
-        "heroUrl": "/images/cosmopolitan.jpg",
-        "ingredients": [],
-        "instructions": [],
-        "isUnderConstruction": true
+        "thumbnailUrl": "/images/cocktails/cosmopolitan.jpg",
+        "heroUrl": "/images/cocktails/cosmopolitan.jpg",
+        "ingredients": [
+          "1.5 oz Vodka (45ml)",
+          "1 oz Cointreau or Triple Sec (30ml)",
+          "0.5 oz Fresh Lime Juice (15ml)",
+          "0.25 oz Cranberry Juice (7ml)",
+          "Orange Twist for Garnish"
+        ],
+        "instructions": [
+          "Add the vodka, Cointreau, lime juice, and cranberry juice to a shaker.",
+          "Fill the shaker with ice and shake vigorously.",
+          "Double strain into a chilled martini glass.",
+          "Express the oils from an orange twist over the drink and drop it in."
+        ],
+        "isUnderConstruction": false
       },
       {
         "name": "Bloody Mary",
         "description": "A Savory Vodka Cocktail with Bold Flavor",
-        "thumbnailUrl": "/images/bloody-mary.jpg",
-        "heroUrl": "/images/bloody-mary.jpg",
-        "ingredients": [],
-        "instructions": [],
-        "isUnderConstruction": true
+        "thumbnailUrl": "/images/cocktails/bloody-mary.jpg",
+        "heroUrl": "/images/cocktails/bloody-mary.jpg",
+        "ingredients": [
+          "2 oz Vodka (60ml)",
+          "4 oz Tomato Juice (120ml)",
+          "0.5 oz Lemon Juice (15ml)",
+          "2 Dashes Worcestershire Sauce",
+          "Celery Salt & Tabasco to taste",
+          "Fresh Ice Cubes"
+        ],
+        "instructions": [
+          "Rim a tall glass with celery salt and fill with ice.",
+          "Combine all liquid ingredients and spices in a cocktail shaker.",
+          "Gently roll the mixture back and forth between two shakers to blend.",
+          "Strain into the prepared glass and garnish with a celery stalk."
+        ],
+        "isUnderConstruction": false
       }
     ]
   },
@@ -56,29 +90,61 @@
       {
         "name": "Negroni",
         "description": "A Bold and Bittersweet Italian Classic",
-        "thumbnailUrl": "/images/negroni.jpg",
-        "heroUrl": "/images/negroni.jpg",
-        "ingredients": [],
-        "instructions": [],
-        "isUnderConstruction": true
+        "thumbnailUrl": "/images/cocktails/negroni.jpg",
+        "heroUrl": "/images/cocktails/negroni.jpg",
+        "ingredients": [
+          "1 oz Gin (30ml)",
+          "1 oz Campari (30ml)",
+          "1 oz Sweet Vermouth (30ml)",
+          "Fresh Ice Cubes",
+          "Orange Peel for Garnish"
+        ],
+        "instructions": [
+          "Fill a mixing glass with fresh ice cubes.",
+          "Add the gin, Campari, and sweet vermouth.",
+          "Stir continuously until thoroughly chilled.",
+          "Strain into a rocks glass over a large ice cube and garnish with an orange peel."
+        ],
+        "isUnderConstruction": false
       },
       {
         "name": "Gin & Tonic",
         "description": "A Crisp and Refreshing Gin Classic",
-        "thumbnailUrl": "/images/gin-tonic.jpg",
-        "heroUrl": "/images/gin-tonic.jpg",
-        "ingredients": [],
-        "instructions": [],
-        "isUnderConstruction": true
+        "thumbnailUrl": "/images/cocktails/gin-tonic.jpg",
+        "heroUrl": "/images/cocktails/gin-tonic.jpg",
+        "ingredients": [
+          "2 oz Gin (60ml)",
+          "4 oz Premium Tonic Water (120ml)",
+          "Fresh Ice Cubes",
+          "Lime Wheel for Garnish"
+        ],
+        "instructions": [
+          "Fill a highball glass or goblet completely with fresh ice cubes.",
+          "Pour the gin directly over the ice.",
+          "Slowly top with tonic water to preserve carbonation.",
+          "Stir gently and garnish with a lime wheel."
+        ],
+        "isUnderConstruction": false
       },
       {
         "name": "Tom Collins",
         "description": "A Bright, Citrusy and Effervescent Gin Cocktail",
-        "thumbnailUrl": "/images/tom-collins.jpg",
-        "heroUrl": "/images/tom-collins.jpg",
-        "ingredients": [],
-        "instructions": [],
-        "isUnderConstruction": true
+        "thumbnailUrl": "/images/cocktails/tom-collins.jpg",
+        "heroUrl": "/images/cocktails/tom-collins.jpg",
+        "ingredients": [
+          "2 oz Gin (60ml)",
+          "1 oz Lemon Juice (30ml)",
+          "0.5 oz Simple Syrup (15ml)",
+          "Club Soda",
+          "Fresh Ice Cubes"
+        ],
+        "instructions": [
+          "Add the gin, lemon juice, and simple syrup to a shaker filled with ice.",
+          "Shake vigorously until well-chilled.",
+          "Strain into a tall Collins glass filled with fresh ice.",
+          "Top off with club soda, stir gently, and garnish with a lemon wheel."
+        ],
+        "isUnderConstruction": false
       }
     ]
   },
@@ -88,29 +154,62 @@
       {
         "name": "Margarita",
         "description": "A Bright and Citrusy Tequila Classic",
-        "thumbnailUrl": "/images/margarita.jpg",
-        "heroUrl": "/images/margarita.jpg",
-        "ingredients": [],
-        "instructions": [],
-        "isUnderConstruction": true
+        "thumbnailUrl": "/images/cocktails/margarita.jpg",
+        "heroUrl": "/images/cocktails/margarita.jpg",
+        "ingredients": [
+          "2 oz Blanco Tequila (60ml)",
+          "1 oz Fresh Lime Juice (30ml)",
+          "0.5 oz Cointreau or Orange Liqueur (15ml)",
+          "0.25 oz Agave Syrup (7ml)",
+          "Coarse Salt for Rim"
+        ],
+        "instructions": [
+          "Rub a lime wedge over the rim of a rocks glass and dip into coarse salt.",
+          "Combine tequila, lime juice, Cointreau, and agave in a shaker with ice.",
+          "Shake vigorously until thoroughly chilled.",
+          "Strain into the prepared rocks glass over fresh ice."
+        ],
+        "isUnderConstruction": false
       },
       {
         "name": "Paloma",
         "description": "A Refreshing Tequila Cocktail with Grapefruit",
-        "thumbnailUrl": "/images/paloma.jpg",
-        "heroUrl": "/images/paloma.jpg",
-        "ingredients": [],
-        "instructions": [],
-        "isUnderConstruction": true
+        "thumbnailUrl": "/images/cocktails/paloma.jpg",
+        "heroUrl": "/images/cocktails/paloma.jpg",
+        "ingredients": [
+          "2 oz Blanco Tequila (60ml)",
+          "0.5 oz Fresh Lime Juice (15ml)",
+          "4 oz Grapefruit Soda (120ml)",
+          "Pinch of Salt",
+          "Fresh Ice Cubes"
+        ],
+        "instructions": [
+          "Fill a highball glass with fresh ice cubes.",
+          "Add the tequila, fresh lime juice, and a pinch of salt.",
+          "Top off with grapefruit soda.",
+          "Stir gently to combine and garnish with a grapefruit wedge."
+        ],
+        "isUnderConstruction": false
       },
       {
         "name": "Mezcal Mule",
         "description": "A Smoky and Refreshing Mezcal Cocktail",
-        "thumbnailUrl": "/images/mezcal-mule.jpg",
-        "heroUrl": "/images/mezcal-mule.jpg",
-        "ingredients": [],
-        "instructions": [],
-        "isUnderConstruction": true
+        "thumbnailUrl": "/images/cocktails/mezcal-mule.jpg",
+        "heroUrl": "/images/cocktails/mezcal-mule.jpg",
+        "ingredients": [
+          "2 oz Mezcal (60ml)",
+          "4 oz Ginger Beer (120ml)",
+          "0.5 oz Fresh Lime Juice (15ml)",
+          "Fresh Ice Cubes",
+          "Lime Wedge for Garnish"
+        ],
+        "instructions": [
+          "Fill a copper mug or rocks glass with fresh ice cubes.",
+          "Pour in the mezcal and fresh lime juice.",
+          "Top with cold ginger beer.",
+          "Stir gently and garnish with a lime wedge."
+        ],
+        "isUnderConstruction": false
       }
     ]
   },
@@ -120,29 +219,61 @@
       {
         "name": "Mojito",
         "description": "A Fresh and Minty Cuban Classic",
-        "thumbnailUrl": "/images/mojito.jpg",
-        "heroUrl": "/images/mojito.jpg",
-        "ingredients": [],
-        "instructions": [],
-        "isUnderConstruction": true
+        "thumbnailUrl": "/images/cocktails/mojito.jpg",
+        "heroUrl": "/images/cocktails/mojito.jpg",
+        "ingredients": [
+          "2 oz White Rum (60ml)",
+          "1 oz Fresh Lime Juice (30ml)",
+          "0.5 oz Simple Syrup (15ml)",
+          "8-10 Fresh Mint Leaves",
+          "Club Soda"
+        ],
+        "instructions": [
+          "Lightly muddle the mint leaves and simple syrup in a highball glass.",
+          "Add the white rum and lime juice.",
+          "Fill the glass with crushed ice or ice cubes.",
+          "Top with club soda, stir gently to lift the mint, and garnish with a mint sprig."
+        ],
+        "isUnderConstruction": false
       },
       {
         "name": "Daiquiri",
         "description": "A Simple and Balanced Rum Classic",
-        "thumbnailUrl": "/images/daiquiri.jpg",
-        "heroUrl": "/images/daiquiri.jpg",
-        "ingredients": [],
-        "instructions": [],
-        "isUnderConstruction": true
+        "thumbnailUrl": "/images/cocktails/daiquiri.jpg",
+        "heroUrl": "/images/cocktails/daiquiri.jpg",
+        "ingredients": [
+          "2 oz White Rum (60ml)",
+          "1 oz Fresh Lime Juice (30ml)",
+          "0.75 oz Simple Syrup (22ml)",
+          "Ice Cubes for Shaking"
+        ],
+        "instructions": [
+          "Add the rum, fresh lime juice, and simple syrup to a cocktail shaker.",
+          "Fill with ice and shake vigorously until completely chilled.",
+          "Double strain into a chilled coupe or martini glass.",
+          "Garnish with a lime twist or wheel."
+        ],
+        "isUnderConstruction": false
       },
       {
         "name": "Piña Colada",
         "description": "A Creamy Tropical Rum Cocktail",
-        "thumbnailUrl": "/images/pina-colada.jpg",
-        "heroUrl": "/images/pina-colada.jpg",
-        "ingredients": [],
-        "instructions": [],
-        "isUnderConstruction": true
+        "thumbnailUrl": "/images/cocktails/pina-colada.jpg",
+        "heroUrl": "/images/cocktails/pina-colada.jpg",
+        "ingredients": [
+          "2 oz White Rum (60ml)",
+          "2 oz Pineapple Juice (60ml)",
+          "1.5 oz Cream of Coconut (45ml)",
+          "0.5 oz Fresh Lime Juice (15ml)",
+          "Ice Cubes"
+        ],
+        "instructions": [
+          "Combine the rum, pineapple juice, cream of coconut, and lime juice in a shaker.",
+          "Fill with ice and shake vigorously until frothy and chilled.",
+          "Strain into a hurricane or tall glass filled with fresh pebble ice.",
+          "Garnish with a pineapple wedge and a cocktail umbrella."
+        ],
+        "isUnderConstruction": false
       }
     ]
   },
@@ -152,29 +283,62 @@
       {
         "name": "Old Fashioned",
         "description": "A Timeless and Spirit-Forward Whiskey Classic",
-        "thumbnailUrl": "/images/old-fashioned.jpg",
-        "heroUrl": "/images/old-fashioned.jpg",
-        "ingredients": [],
-        "instructions": [],
-        "isUnderConstruction": true
+        "thumbnailUrl": "/images/cocktails/old-fashioned.jpg",
+        "heroUrl": "/images/cocktails/old-fashioned.jpg",
+        "ingredients": [
+          "2 oz Bourbon or Rye Whiskey (60ml)",
+          "0.25 oz Simple Syrup (7ml)",
+          "2-3 Dashes Angostura Bitters",
+          "Orange Peel for Garnish",
+          "One Large Ice Cube"
+        ],
+        "instructions": [
+          "Add the simple syrup and bitters to a rocks glass.",
+          "Pour in the whiskey and add one large ice cube.",
+          "Stir gently for 20-30 seconds to chill and dilute slightly.",
+          "Express the oils from an orange peel over the glass and drop it in."
+        ],
+        "isUnderConstruction": false
       },
       {
         "name": "Whiskey Sour",
         "description": "A Balanced Whiskey Cocktail with Citrus",
-        "thumbnailUrl": "/images/whiskey-sour.jpg",
-        "heroUrl": "/images/whiskey-sour.jpg",
-        "ingredients": [],
-        "instructions": [],
-        "isUnderConstruction": true
+        "thumbnailUrl": "/images/cocktails/whiskey-sour.jpg",
+        "heroUrl": "/images/cocktails/whiskey-sour.jpg",
+        "ingredients": [
+          "2 oz Bourbon (60ml)",
+          "0.75 oz Lemon Juice (22ml)",
+          "0.5 oz Simple Syrup (15ml)",
+          "1 Egg White (Optional but recommended)",
+          "Angostura Bitters for Garnish"
+        ],
+        "instructions": [
+          "Add the bourbon, lemon juice, simple syrup, and egg white to a shaker.",
+          "Dry shake vigorously (without ice) to emulsify the egg white.",
+          "Add ice to the shaker and shake again until thoroughly chilled.",
+          "Strain into a chilled coupe or rocks glass and garnish with drops of bitters."
+        ],
+        "isUnderConstruction": false
       },
       {
         "name": "Manhattan",
         "description": "A Refined and Spirit-Forward Whiskey Classic",
-        "thumbnailUrl": "/images/manhattan.jpg",
-        "heroUrl": "/images/manhattan.jpg",
-        "ingredients": [],
-        "instructions": [],
-        "isUnderConstruction": true
+        "thumbnailUrl": "/images/cocktails/manhattan.jpg",
+        "heroUrl": "/images/cocktails/manhattan.jpg",
+        "ingredients": [
+          "2 oz Rye Whiskey (60ml)",
+          "1 oz Sweet Vermouth (30ml)",
+          "2 Dashes Angostura Bitters",
+          "Ice Cubes for Stirring",
+          "Brandied Cherry for Garnish"
+        ],
+        "instructions": [
+          "Add the rye whiskey, sweet vermouth, and bitters to a mixing glass.",
+          "Fill with ice and stir smoothly until well-chilled.",
+          "Strain into a chilled coupe or martini glass.",
+          "Garnish with a brandied cherry."
+        ],
+        "isUnderConstruction": false
       }
     ]
   },
@@ -184,29 +348,60 @@
       {
         "name": "Sidecar",
         "description": "A Classic Brandy Cocktail with Bright Citrus",
-        "thumbnailUrl": "/images/sidecar.jpg",
-        "heroUrl": "/images/sidecar.jpg",
-        "ingredients": [],
-        "instructions": [],
-        "isUnderConstruction": true
+        "thumbnailUrl": "/images/cocktails/sidecar.jpg",
+        "heroUrl": "/images/cocktails/sidecar.jpg",
+        "ingredients": [
+          "2 oz Cognac (60ml)",
+          "0.75 oz Cointreau or Triple Sec (22ml)",
+          "0.75 oz Fresh Lemon Juice (22ml)",
+          "Superfine Sugar for Rim"
+        ],
+        "instructions": [
+          "Run a lemon wedge along the rim of a coupe glass and dip into sugar.",
+          "Add the Cognac, Cointreau, and lemon juice to a cocktail shaker.",
+          "Fill with ice and shake vigorously until chilled.",
+          "Strain into the prepared sugar-rimmed glass."
+        ],
+        "isUnderConstruction": false
       },
       {
         "name": "Brandy Alexander",
         "description": "A Rich and Creamy Brandy Classic",
-        "thumbnailUrl": "/images/brandy-alexander.jpg",
-        "heroUrl": "/images/brandy-alexander.jpg",
-        "ingredients": [],
-        "instructions": [],
-        "isUnderConstruction": true
+        "thumbnailUrl": "/images/cocktails/brandy-alexander.jpg",
+        "heroUrl": "/images/cocktails/brandy-alexander.jpg",
+        "ingredients": [
+          "1.5 oz Cognac (45ml)",
+          "1 oz Dark Crème de Cacao (30ml)",
+          "1 oz Heavy Cream (30ml)",
+          "Freshly Grated Nutmeg for Garnish"
+        ],
+        "instructions": [
+          "Combine the Cognac, crème de cacao, and heavy cream in a cocktail shaker.",
+          "Fill with ice and shake vigorously until cold and creamy.",
+          "Strain into a chilled coupe or martini glass.",
+          "Garnish with a light dusting of freshly grated nutmeg."
+        ],
+        "isUnderConstruction": false
       },
       {
         "name": "French 75",
         "description": "A Sparkling Cocktail with Cognac and Citrus",
-        "thumbnailUrl": "/images/french-75.jpg",
-        "heroUrl": "/images/french-75.jpg",
-        "ingredients": [],
-        "instructions": [],
-        "isUnderConstruction": true
+        "thumbnailUrl": "/images/cocktails/french-75.jpg",
+        "heroUrl": "/images/cocktails/french-75.jpg",
+        "ingredients": [
+          "1 oz Cognac (30ml)",
+          "0.5 oz Fresh Lemon Juice (15ml)",
+          "0.5 oz Simple Syrup (15ml)",
+          "3 oz Champagne (90ml)",
+          "Lemon Twist for Garnish"
+        ],
+        "instructions": [
+          "Add the Cognac, lemon juice, and simple syrup to a shaker with ice.",
+          "Shake well until chilled.",
+          "Strain into a champagne flute.",
+          "Top with cold Champagne and garnish with a lemon twist."
+        ],
+        "isUnderConstruction": false
       }
     ]
   }
