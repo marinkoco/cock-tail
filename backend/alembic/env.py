@@ -7,6 +7,7 @@ from sqlalchemy.engine import Connection
 from sqlalchemy.ext.asyncio import async_engine_from_config
 
 from core.database import Base, settings
+import models  # noqa: F401 - register model metadata for Alembic autogenerate
 
 
 config = context.config

@@ -1,0 +1,40 @@
+services:
+  postgres:
+    image: postgres:15-alpine
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: cocktail_user
+      POSTGRES_PASSWORD: cocktail_pass
+      POSTGRES_DB: cocktail_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cocktail_user -d cocktail_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql+asyncpg://cocktail_user:cocktail_pass@postgres:5432/cocktail_db
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "4321:4321"
+    environment:
+      ASTRO_BASE: /
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:

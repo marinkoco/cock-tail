@@ -98,16 +98,18 @@ cock-tail/
 
     [x] **Step 3.1:** Scaffold initial FastAPI backend directory structure for future migration off GitHub Pages.
     [x] **Step 3.2:** Configure PostgreSQL database connection pool and initialize Alembic for schema migrations.
-    [/] **Step 3.3:** Create a `docker-compose.yml` file to provision a dedicated PostgreSQL database container for the `cock-tail` project and define the initial SQLAlchemy database models.
+    [x] **Step 3.3:** Provision local PostgreSQL database via Docker Compose (port 5433) and establish SQLAlchemy models (`Category`, `Cocktail`).
+    [x] **Step 3.4:** Generate and apply initial Alembic migrations, and fully Dockerize the entire stack (Frontend, Backend, and Database) for local development.
+    [ ] **Step 3.5:** Build Pydantic schemas and implement FastAPI CRUD endpoints to interact with the database.
 
 ---
 
 ## 5. Current Active Execution Unit
 
-* **Current Step ID:** Step 3.3
-* **Status:** `[/] In Progress`
-* **Target Files:** docker-compose.yml, backend/models/base.py, backend/models/cocktail.py
-* **Objective:** Provision a dedicated local PostgreSQL database using Docker Compose and establish the initial SQLAlchemy models to mirror the existing cocktails.json data structure.
+* **Current Step ID:** Step 3.5
+* **Status:** `[ ] Not Started`
+* **Target Files:** `backend/api/`, `backend/schemas/cocktail.py`, `backend/main.py`
+* **Objective:** Build out the Pydantic schemas and FastAPI CRUD endpoints to serve the cocktail data dynamically from the PostgreSQL database, preparing the API for frontend integration.
 
 ---
 
@@ -123,3 +125,4 @@ cock-tail/
 * **2026-08-09:** Step 2.3 completed: "Under Construction" conditional rendering and visual overlays added to non-active cocktail cards.
 * **2026-08-09:** Step 3.1 completed: Scaffolded the FastAPI backend directory structure and initialized the core application entry point.
 * **2026-08-09:** Step 3.2 completed: PostgreSQL connection logic (SQLAlchemy) and Alembic migration environment configured. Intentionally left without an active database to maintain strict project isolation.
+* **2026-08-15:** Step 3.3 & 3.4 completed: Full-stack Dockerization achieved. Configured `docker-compose.yml` for Astro frontend, FastAPI backend, and PostgreSQL (bound to 5433 to prevent local conflicts). Created SQLAlchemy models, successfully generated and applied initial Alembic migrations, and cleaned up redundant local Python artifacts.

@@ -3,6 +3,6 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   site: 'https://marinkoco.github.io',
-  base: '/cock-tail/',
+  base: process.env.ASTRO_BASE ?? '/cock-tail/',
   integrations: [tailwind()],
 });
