@@ -100,16 +100,21 @@ cock-tail/
     [x] **Step 3.2:** Configure PostgreSQL database connection pool and initialize Alembic for schema migrations.
     [x] **Step 3.3:** Provision local PostgreSQL database via Docker Compose (port 5433) and establish SQLAlchemy models (`Category`, `Cocktail`).
     [x] **Step 3.4:** Generate and apply initial Alembic migrations, and fully Dockerize the entire stack (Frontend, Backend, and Database) for local development.
-    [ ] **Step 3.5:** Build Pydantic schemas and implement FastAPI CRUD endpoints to interact with the database.
+    [x] **Step 3.5:** Build Pydantic schemas and implement FastAPI CRUD endpoints to interact with the database.
+
+### Phase 4: Full-Stack Integration & Migration ###
+
+    [/] **Step 4.1:** Develop a database seeding script to parse the static `cocktails.json` file and populate the PostgreSQL database via the new FastAPI `POST` endpoints.
+    [ ] **Step 4.2:** Refactor the Astro frontend components to replace static JSON data imports with dynamic asynchronous `fetch()` calls targeting the FastAPI backend.
 
 ---
 
 ## 5. Current Active Execution Unit
 
-* **Current Step ID:** Step 3.5
+* **Current Step ID:** Step 4.1
 * **Status:** `[ ] Not Started`
-* **Target Files:** `backend/api/`, `backend/schemas/cocktail.py`, `backend/main.py`
-* **Objective:** Build out the Pydantic schemas and FastAPI CRUD endpoints to serve the cocktail data dynamically from the PostgreSQL database, preparing the API for frontend integration.
+* **Target Files:** `backend/scripts/seed.py` (new), `frontend/src/data/cocktails.json`
+* **Objective:** Write and execute an automated Python seeding script that reads the existing JSON data structure, iterates through the base liquors and cocktails, and sends `POST` requests to the `/api/categories` and `/api/cocktails` endpoints to populate the PostgreSQL database with real data.
 
 ---
 
@@ -126,3 +131,4 @@ cock-tail/
 * **2026-08-09:** Step 3.1 completed: Scaffolded the FastAPI backend directory structure and initialized the core application entry point.
 * **2026-08-09:** Step 3.2 completed: PostgreSQL connection logic (SQLAlchemy) and Alembic migration environment configured. Intentionally left without an active database to maintain strict project isolation.
 * **2026-08-15:** Step 3.3 & 3.4 completed: Full-stack Dockerization achieved. Configured `docker-compose.yml` for Astro frontend, FastAPI backend, and PostgreSQL (bound to 5433 to prevent local conflicts). Created SQLAlchemy models, successfully generated and applied initial Alembic migrations, and cleaned up redundant local Python artifacts.
+* **2026-08-16:** Step 3.5 completed: Built Pydantic v2 schemas in `schemas/cocktail.py`, implemented complete async CRUD endpoints in `api/cocktails.py` and `api/categories.py` with eager relation loading, enabled CORS, and wired all routers into `main.py`. Verified all CRUD endpoints against PostgreSQL container.
